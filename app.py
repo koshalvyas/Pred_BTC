@@ -31,7 +31,7 @@ training_set_scaled = sc.fit_transform(training_set)
 def home():
     return render_template('index.html')
 
-app.listen(process.env.PORT || 3000, function(){
+@app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
